@@ -11,9 +11,9 @@ inputs:
     required: false
     default: "openwrt/bin/targets/*/*/*rootfs.tar.gz"
   openwrt_board:
-    description: "Select device board."
+    description: "Select hardware platform."
     required: false
-    default: "all"
+    default: "rockchip"
   kernel_repo:
     description: "Select kernel repository."
     required: false
