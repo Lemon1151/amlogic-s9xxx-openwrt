@@ -1,5 +1,5 @@
 #============================================================================================
-# https://github.com/ophub/amlogic-s9xxx-openwrt
+# https://github.com/Mango1151/amlogic-s9xxx-openwrt
 # Description: Build OpenWrt
 #============================================================================================
 
@@ -341,7 +341,7 @@ jobs:
 
       - name: Packaging OpenWrt
         if: ${{ steps.clean.outputs.status }} == 'success' && !cancelled()
-        uses: ophub/amlogic-s9xxx-openwrt@main
+        uses: Mango1151/amlogic-s9xxx-openwrt@main
         with:
           openwrt_path: openwrt/output/*rootfs.tar.gz
           openwrt_board: ${{ inputs.openwrt_board }}
