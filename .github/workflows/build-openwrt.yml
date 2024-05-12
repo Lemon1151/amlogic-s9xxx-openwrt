@@ -21,7 +21,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "xiaobao"
         type: choice
         options:
           - all
@@ -152,16 +152,18 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "6.6.28"
+        default: "6.6.30"
         type: choice
         options:
-          - 5.4.1_5.10.1
-          - 5.15.1_6.1.1
-          - 5.4.1
-          - 5.10.181
-          - 5.10.214
-          - 6.1.61
+          - 5.10.y
+          - 5.10.210
+          - 5.10.216
+          - 6.1.y
+          - 6.1.81
+          - 6.1.90
+          - 6.6.y
           - 6.6.28
+          - 6.6.30
       auto_kernel:
         description: "Auto use the latest kernel"
         required: false
@@ -170,10 +172,11 @@ on:
       kernel_repo:
         description: "Set the kernel repository"
         required: false
-        default: "ophub/kernel"
+        default: "Lemon1151/kernel"
         type: choice
         options:
           - ophub/kernel
+          - Lemon1151/kernel
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
@@ -195,12 +198,13 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "ophub"
+        default: "-Lemon1151"
         type: choice
         options:
           - ophub
           - angel
           - yourname
+          - Lemon1151
 
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
